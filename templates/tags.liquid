@@ -1,0 +1,15 @@
+<section class="tags-page">
+  <header class="tags-header">
+    <h1>All Tags</h1>
+    <p>Browse posts by topic</p>
+  </header>
+  
+  <div class="tags-list">
+    {% for tag in tags %}
+      <a href="{{ tag.url }}" class="tag-item">
+        <span class="tag-name">{{ tag.name }}</span>
+        <span class="tag-count">({{ tag.posts_count }})</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
