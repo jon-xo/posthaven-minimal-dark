@@ -1,0 +1,57 @@
+---
+name: Minimal Dark
+author: jon-xo
+url: https://github.com/jon-xo/posthaven-minimal-dark
+posts_per_page:
+  include_in_settings: true
+  default: 10
+
+settings:
+  - id: heading_color
+    label: Heading Color
+    default: "#e2e8f0"
+    type: color
+  
+  - id: background_color
+    label: Background Color
+    default: "#0f172a"
+    type: color
+  
+  - id: accent_color
+    label: Accent Color
+    default: "#5eead4"
+    type: color
+  
+  - id: text_color
+    label: Text Color
+    default: "#94a3b8"
+    type: color
+  
+  - id: heading_font
+    label: Heading Font
+    type: radio
+    default: Inter
+    options:
+      - value: Inter
+        label: Inter (Modern Sans-Serif)
+      - value: Georgia
+        label: Georgia (Serif)
+      - value: system-ui
+        label: System Default
+  
+  - id: body_font
+    label: Body Font
+    type: radio
+    default: Inter
+    options:
+      - value: Inter
+        label: Inter (Modern Sans-Serif)
+      - value: Georgia
+        label: Georgia (Serif)
+      - value: system-ui
+        label: System Default
+  
+  - id: show_social_links
+    label: Show Social Links
+    default: true
+    type: checkbox
