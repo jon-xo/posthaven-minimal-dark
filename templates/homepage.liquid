@@ -1,0 +1,42 @@
+<section class="homepage">
+  <ul class="post-list">
+    {% for post in posts %}
+      <li class="post-item">
+        <h2 class="post-title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        
+        <div class="post-meta">
+          <time datetime="{{ post.published_at | date: '%Y-%m-%d' }}">
+            {{ post.published_at | date: "%B %d, %Y" }}
+          </time>
+          {% if post.author %}
+            by <span class="author">{{ post.author.name }}</span>
+          {% endif %}
+        </div>
+        
+        {% if post.excerpt %}
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+          </div>
+        {% endif %}
+        
+        <a href="{{ post.url }}" class="read-more">Read more →</a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  {% if posts.has_previous or posts.has_next %}
+    <nav class="pagination">
+      {% if posts.has_previous %}
+        <a href="{{ posts.previous_page_url }}" class="previous">← Newer</a>
+      {% endif %}
+      
+      <span class="current">Page {{ posts.current_page }}</span>
+      
+      {% if posts.has_next %}
+        <a href="{{ posts.next_page_url }}" class="next">Older →</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+</section>

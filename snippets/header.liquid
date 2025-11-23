@@ -1,0 +1,19 @@
+<header>
+  <div class="container">
+    <h1 class="site-title">
+      <a href="{{ site.url }}">{{ site.name }}</a>
+    </h1>
+    
+    {% if site.description %}
+      <p class="site-description">{{ site.description }}</p>
+    {% endif %}
+    
+    <nav>
+      <ul>
+        <li><a href="{{ site.url }}">Home</a></li>
+        <li><a href="{{ site.url }}/archive">Archive</a></li>
+        <li><a href="{{ site.url }}/tags">Tags</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
